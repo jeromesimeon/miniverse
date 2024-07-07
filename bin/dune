@@ -1,0 +1,4 @@
+(executable
+ (public_name miniverse)
+ (name main)
+ (libraries miniverse))

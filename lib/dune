@@ -1,0 +1,3 @@
+(library
+ (name miniverse)
+ (libraries fmt))
