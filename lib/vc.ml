@@ -3,7 +3,7 @@
 type cexpr =
   | CVal of cvalue
   | CEqSeq of ceq * cexpr
-  | CExist of Common.var * cexpr
+  | CExists of Common.var * cexpr
   | CFail
   | CChoice of cexpr * cexpr
   | CApp of cvalue * cvalue

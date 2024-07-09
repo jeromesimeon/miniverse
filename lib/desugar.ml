@@ -25,11 +25,11 @@ let rec cfreshbinders cel =
 
 (* Little Core VC building blocks *)
 let cbind x ce1 ce2 =
-  CExist (x, (CEqSeq (CEq (CVar x, ce1), ce2)))
+  CExists (x, (CEqSeq (CEq (CVar x, ce1), ce2)))
 let ceqseq x ce1 ce2 ce3 =
   cbind x ce1 (CEqSeq (CEq (CVar x, ce2), ce3))
 let cexists xl ce =
-  List.fold_left (fun e -> fun x -> CExist (x, e)) ce xl
+  List.fold_left (fun e -> fun x -> CExists (x, e)) ce xl
 
 let chvars xl =
   List.map (fun x -> CVar x) xl
